@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Firebase Database URL (replace this with your actual URL)
-const FIREBASE_URL = 'https://your-project-id.firebaseio.com/your-data-path.json';
+const FIREBASE_URL = 'https://vehicle-tracking-7abfa-default-rtdb.firebaseio.com/vehicle.json';
 
 // Endpoint to receive SIM800L data
 app.post('/post-data', async (req, res) => {
