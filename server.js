@@ -1,3 +1,4 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
@@ -17,8 +18,8 @@ app.post('/post-data', async (req, res) => {
     try {
         console.log('Received data:', req.body);
 
-        // Forward the data to Firebase
-        const response = await axios.post(FIREBASE_URL, req.body);
+        // Forward the data to Firebase using PUT (not POST)
+        const response = await axios.put(FIREBASE_URL, req.body);
 
         console.log('Forwarded to Firebase:', response.data);
 
